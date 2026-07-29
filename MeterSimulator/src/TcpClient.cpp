@@ -13,12 +13,12 @@ bool TcpClient::connect(const std::string& ipAddress, int port)
 
 bool TcpClient::sendTelemetry(const TelemetryData& packet)
 {
-    // (connected) is more efficient than (connected == true). Also (!connected) is more efficient than (connected == false).
-    if (connected)
+    if (!connected)
     {
-        return true;
+        return false;
     }
-    return false;
+
+    return true;
 }
 
 void TcpClient::disconnect()
