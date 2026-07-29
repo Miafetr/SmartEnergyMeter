@@ -22,4 +22,9 @@ public:
 
 private:
 
-    int socketDescriptor;   /
+    int socketDescriptor;   // Real TCP socket
+    
+    bool connected;
+};
+
+#endif
