@@ -12,4 +12,16 @@ public:
     // C++ Best Practice:
     // - const = function cannot modify the object.
     // - & = pass by reference (no copy).
-    // - const Type& = ef
+    // - const Type& = efficient and safe for read-only objects.
+    bool connect(const std::string& ipAddress, int port);
+
+    bool sendTelemetry(const TelemetryData& packet);
+
+
+    void disconnect();
+
+private:
+    bool connected;
+};
+
+#endif
