@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.Json;
+using MeterBackend;
 
 TcpListener server = new TcpListener(
     IPAddress.Loopback,
@@ -24,6 +26,11 @@ using StreamReader reader = new StreamReader(
     Encoding.UTF8
 );
 
+JsonSerializerOptions jsonOptions = new JsonSerializerOptions
+{
+    PropertyNameCaseInsensitive = true
+};
+
 while (true)
 {
     string? jsonPacket = await reader.ReadLineAsync();
@@ -33,8 +40,27 @@ while (true)
         break;
     }
 
-    Console.WriteLine("Telemetry received:");
-    Console.WriteLine(jsonPacket);
+    TelemetryData? telemetry =
+        JsonSerializer.Deserialize<TelemetryData>(
+            jsonPacket,
+            jsonOptions
+        );
+
+    if (telemetry == null)
+    {
+        Console.WriteLine("Invalid telemetry packet.");
+        continue;
+    }
+
+    Console.WriteLine("Telemetry object created:");
+    Console.WriteLine($"Device ID: {telemetry.DeviceId}");
+    Console.WriteLine($"Timestamp: {telemetry.Timestamp}");
+    Console.WriteLine($"Sequence: {telemetry.SequenceNumber}");
+    Console.WriteLine($"Voltage: {telemetry.Voltage:F2} V");
+    Console.WriteLine($"Current: {telemetry.Current:F2} A");
+    Console.WriteLine($"Power: {telemetry.Power:F2} W");
+    Console.WriteLine($"Temperature: {telemetry.Temperature:F2} C");
+    Console.WriteLine($"Status: {telemetry.Status}");
     Console.WriteLine();
 }
 
