@@ -1,3 +1,8 @@
 .DS_Store
 
+# C++ generated build files
 MeterSimulator/build/
+
+# C# generated files
+Backend/MeterBackend/bin/
+Backend/MeterBackend/obj/
