@@ -21,6 +21,9 @@ public:
     void disconnect();
 
 private:
+
+    int socketDescriptor;   // Real TCP socket
+    
     bool connected;
 };
 

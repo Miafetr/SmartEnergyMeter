@@ -1,0 +1,15 @@
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/bin/Debug/net10.0/MeterBackend
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/bin/Debug/net10.0/MeterBackend.deps.json
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/bin/Debug/net10.0/MeterBackend.runtimeconfig.json
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/bin/Debug/net10.0/MeterBackend.dll
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/bin/Debug/net10.0/MeterBackend.pdb
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.AssemblyInfoInputs.cache
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.AssemblyInfo.cs
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.csproj.CoreCompileInputs.cache
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.sourcelink.json
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.dll
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/refint/MeterBackend.dll
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.pdb
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/MeterBackend.genruntimeconfig.cache
+/Users/mahshidhassanzadehfetr/Documents/SmartEnergyMeter/Backend/MeterBackend/obj/Debug/net10.0/ref/MeterBackend.dll

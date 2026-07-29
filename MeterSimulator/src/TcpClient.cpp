@@ -1,15 +1,61 @@
 #include "TcpClient.h"
 
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
 #include <iomanip>
 #include <iostream>
 
 TcpClient::TcpClient()
 {
+    socketDescriptor = -1;
     connected = false;
 }
 
 bool TcpClient::connect(const std::string& ipAddress, int port)
 {
+    socketDescriptor = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (socketDescriptor < 0)
+    {
+        std::cerr << "Failed to create socket.\n";
+        return false;
+    }
+
+    sockaddr_in serverAddress{};
+
+    serverAddress.sin_family = AF_INET;
+    serverAddress.sin_port = htons(port);
+
+    int addressResult = inet_pton(
+        AF_INET,
+        ipAddress.c_str(),
+        &serverAddress.sin_addr
+    );
+
+    if (addressResult <= 0)
+    {
+        std::cerr << "Invalid IP address.\n";
+        close(socketDescriptor);
+        socketDescriptor = -1;
+        return false;
+    }
+
+    int connectionResult = ::connect(
+        socketDescriptor,
+        reinterpret_cast<sockaddr*>(&serverAddress),
+        sizeof(serverAddress)
+    );
+
+    if (connectionResult < 0)
+    {
+        std::cerr << "Failed to connect to backend.\n";
+        close(socketDescriptor);
+        socketDescriptor = -1;
+        return false;
+    }
+
     connected = true;
     return true;
 }

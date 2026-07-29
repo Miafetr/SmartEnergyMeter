@@ -57,37 +57,4 @@ static std::mt19937 generator(
 
     TelemetryData packet;
 
-    packet.deviceId = "Meter-001";
-    packet.timestamp = getCurrentTimestamp();
-
-    packet.sequenceNumber = sequenceNumber;
-    sequenceNumber++;
-
-    packet.voltage = voltageDistribution(generator);
-    packet.current = currentDistribution(generator);
-
-    // Electrical power = voltage × current.
-    packet.power = packet.voltage * packet.current;
-
-    // Higher electrical current can cause the meter to become warmer.
-    packet.temperature =
-        25.0 +
-        (packet.current * 2.0) +
-        temperatureNoiseDistribution(generator);
-
-    // Determine device status from the meter temperature.
-    if (packet.temperature >= 58.0)
-    {
-        packet.status = DeviceStatus::Fault;
-    }
-    else if (packet.temperature >= 50.0)
-    {
-        packet.status = DeviceStatus::Warning;
-    }
-    else
-    {
-        packet.status = DeviceStatus::Online;
-    }
-
-    return packet;
-}
+    packet.dev
