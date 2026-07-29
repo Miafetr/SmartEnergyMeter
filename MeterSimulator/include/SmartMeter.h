@@ -1,21 +1,17 @@
 #ifndef SMART_METER_H
 #define SMART_METER_H
 
-#include <string>
-
 #include "SensorSimulator.h"
 #include "TcpClient.h"
 
 class SmartMeter
 {
 public:
-    SmartMeter(const std::string& deviceId);
+    SmartMeter();
 
-    void run();
+    void start();
 
 private:
-    std::string deviceId;
-
     SensorSimulator simulator;
     TcpClient client;
 };
