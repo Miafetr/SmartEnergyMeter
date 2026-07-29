@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/MeterSimulator.dir/src/main.cpp.o CMakeFiles/MeterSimulator.dir/src/SensorSimulator.cpp.o CMakeFiles/MeterSimulator.dir/src/SmartMeter.cpp.o CMakeFiles/MeterSimulator.dir/src/TcpClient.cpp.o -o MeterSimulator
