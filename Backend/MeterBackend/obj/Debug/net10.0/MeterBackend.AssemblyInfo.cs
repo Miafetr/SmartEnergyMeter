@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeterBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be75a43827047a44123fac563dd272f630333d5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e02b2db9fc981c1eb2950f20c6fed3bdcfe4c0eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeterBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeterBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
